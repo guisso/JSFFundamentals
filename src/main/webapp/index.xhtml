@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h1>Index</h1>
+        
+        <h:form>
+            <!-- Três alternativas para exibição de um rótulo -->
+            
+            <!-- 1. Fechamento obrigatório da tag -->
+            <h:outputLabel value="Digite um texto:"></h:outputLabel> |
+            
+            <!-- 2. Fechamento obrigatório da tag -->
+            <h:outputLabel value="Digite um texto:" /> |
+            
+            <!-- 3. Tag HTML correspondente -->
+            <label>Digite um texto:</label><br />
+            
+            <!-- Vínculo da propriedade "texto" do bean gerenciado Eco -->
+            <h:inputText value="#{eco.texto}" /><br />
+            
+            <!-- Definição do recurso que processará os dados -->
+            <h:commandButton value="Enviar" action="saida" />
+            
+        </h:form>
+    </h:body>
+</html>
+
+
+
